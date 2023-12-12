@@ -37,12 +37,27 @@ button {
 }
 
 .containerAtributos {
+
     display: flex;
 }
 
 .containerStatus {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 0 auto;
+    width: 50%; /* editar depois */
     display: flex;
 }
+
+.containerResistencia {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 0 auto;
+    width: 50%;
+}
+
   
 .coluna01 {
     width: 50%;
