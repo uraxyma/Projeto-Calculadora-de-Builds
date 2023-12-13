@@ -3,14 +3,8 @@
 // === variaveis globais
 
 // === === === funcções === === ===
-const buttonCalcular = document.querySelector("#calcular");
-
-buttonCalcular.onclick = () => {
-  const inputNivel = document.querySelector("#nivel");
-  const valorNivel = inputNivel.value;
-
-  const valorRestantes = valorNivel * 3;
-
-  let inputRestantes = document.querySelector("#restantes");
-  inputRestantes.value = valorRestantes;
-};
+function calcular() {
+    var nivel = document.getElementById("nivel").value;
+    var resultado = nivel * 3;
+    document.getElementById("atributos").innerHTML = resultado;
+}
