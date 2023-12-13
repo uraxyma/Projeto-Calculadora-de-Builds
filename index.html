@@ -1,150 +1,140 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Calculadora de Builds</title>
-   <link rel="stylesheet" href="styles/styles.css">
-</head>
-<body>
-    <h1>Calculadora de Builds: Pangeia</h1>
-    <!--
-       ================== Seleção de classe Primaria!
-    -->
-    <label for="personagem">Classe:</label>
-    <select id="personagem">
-        <option value="Nenhum">Escolha</option>
-        <option value="lutador">Lutador</option>
-        <option value="ranger">Ranger</option>
-        <option value="magico">Mágico</option>
-    </select>
-    <br><br>
-
-
-    <!--
-        ================== Inicio Nível do personagem
-    -->
-    <label for="nivel">Nível:</label>
-    <input type="number" id="nivel" min="0" max="75">
-
-    <!--
-        ================== Inicio Atributos Restantes
-    -->
-    <label for="restantes" >Atributos:</label>
-    <span id="atributos"></span>
-    <br><br>
-    <!--
-        ================== Botão Calcular
-    -->
-    <button onclick="calcular()">Calcular</button>    
-    <br><br>
-
-    <h2>Atributos</h2>
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculadora de Builds</title>
     
-<!--
-    ================== Atributos Inicio
--->
+        <link rel="stylesheet" href="styles/styles.css">
+        <script src="scripts/scripts.js"></script>
+    </head>
+    <body>
+        <h1>Calculadora de Builds: Pangeia</h1>
+     <!--
+     ================== Seleção de classe Primaria!
+     -->
+        <label for="personagem">Classe:</label>
+            <select id="personagem">
+                <option value="Nenhum">Escolha</option>
+                <option value="lutador">Lutador</option>
+                <option value="ranger">Ranger</option>
+                <option value="magico">Mágico</option>
+            </select>
+        <br><br>
+     <!--
+     ================== Inicio Nível do personagem
+     -->
+        <label for="nivel">Nível:</label>
+        <input type="number" id="nivel" min="0" max="75">
+     <!--
+     ================== Atributos Restantes
+     -->
+        <label for="restantes" >Atributos:</label>
+        <span id="atributos"></span>
+            <br><br>
+     <!--
+     ================== Botão Calcular
+     -->
+        <button onclick="calcular()">Calcular</button>    
+            <br><br>
 
-<div class="containerAtributos">
-    <div class="coluna01">
-      <label for="forca">Força:</label>
-      <input type="number" id="forca" min="00" max="100" value="000" onchange="atualizarAtributosRestantes()">
-     <!--<span class="somaForca" id="somaForca"></span>-->
-      <br><br>
-  
-      <label for="inteligencia">Inteligência:</label>
-      <input type="number" id="inteligencia" min="00" max="100" value="000" onchange="atualizarAtributosRestantes()">
-      <br><br>
-  
-      <label for="destreza">Destreza:</label>
-      <input type="number" id="destreza" min="00" max="100" value="000" onchange="atualizarAtributosRestantes()">
-      <br><br>
-  
-      <label for="agilidade">Agilidade:</label>
-      <input type="number" id="agilidade" min="00" max="100" value="000" onchange="atualizarAtributosRestantes()">
-    </div>
-    <div class="coluna01">
-      <label for="vigor">Vigor:</label>
-      <input type="number" id="vigor" min="00" max="100"  value="000" onchange="atualizarAtributosRestantes()">
-      <br><br>
-  
-      <label for="talento">Talento:</label>
-      <input type="number" id="talento" min="00" max="100" value="000" onchange="atualizarAtributosRestantes()">
-      <br><br>
-  
-      <label for="sorte">Sorte:</label>
-      <input type="number" id="sorte" min="00" max="100" value="000" onchange="atualizarAtributosRestantes()">
-      <br><br>
-  
-      <label for="fe">Fé:</label>
-      <input type="number" id="fe" min="00" max="100" value="000" onchange="atualizarAtributosRestantes()">
-    </div>
-</div>
-<br><br>
-    <!--
-        ================== Estatus do personagem
-    -->
-    <h3>Status do Personagem</h3>
-<div class="containerStatus">
-    <div class="coluna01">
-        <label for="nivel">Vida:</label>
-        <input type="text" name="valor" value="1000/1000 " />
-    
-        <label for="nivel">Estamina:</label>
-        <input type="text" name="valor" value="1000/1000 " />
-    
-        <label for="nivel">Mana:</label>
-        <input type="text" name="valor" value="1000/1000 " />
+     <!--
+     ================== Atributos
+     -->
+        <h2>Atributos</h2>
+            <div class="containerAtributos">
+                <div class="coluna01">
+                    <label for="forca">Força:</label>
+                    <input type="number" id="forca" min="00" max="100" onchange="atualizarAtributosRestantes()">
+                        <br><br>
+                    
+                    <label for="inteligencia">Inteligência:</label>
+                    <input type="number" id="inteligencia" min="00" max="100" onchange="atualizarAtributosRestantes()">
+                        <br><br>
+                    
+                    <label for="destreza">Destreza:</label>
+                    <input type="number" id="destreza" min="00" max="100" onchange="atualizarAtributosRestantes()">
+                        <br><br>
+                    
+                    <label for="agilidade">Agilidade:</label>
+                    <input type="number" id="agilidade" min="00" max="100" onchange="atualizarAtributosRestantes()">
+                </div>
 
-        <label for="nivel">Acerto Critico:</label>
-        <input type="text" name="valor" value="000" placeholder="000"/>
-    </div>
-    
+                <div class="coluna01">
+                    <label for="vigor">Vigor:</label>
+                    <input type="number" id="vigor" min="00" max="100" onchange="atualizarAtributosRestantes()">
+                        <br><br>
+                    
+                    <label for="talento">Talento:</label>
+                    <input type="number" id="talento" min="00" max="100" onchange="atualizarAtributosRestantes()">
+                        <br><br>
+                    
+                    <label for="sorte">Sorte:</label>
+                    <input type="number" id="sorte" min="00" max="100" onchange="atualizarAtributosRestantes()">
+                        <br><br>
+                    
+                    <label for="fe">Fé:</label>
+                    <input type="number" id="fe" min="00" max="100" onchange="atualizarAtributosRestantes()">
+                </div>
+            </div>
+        <br><br>
+     <!--
+     ================== Estatus do personagem
+     -->
+        <h3>Status do Personagem</h3>
+            <div class="containerStatus">
+                <div class="coluna01">
+                    <label for="nivel">Vida:</label>
+                    <input type="text" name="valor" value="1000/1000 " />
+                
+                    <label for="nivel">Estamina:</label>
+                    <input type="text" name="valor" />
+                
+                    <label for="nivel">Mana:</label>
+                    <input type="text" name="valor" />
 
-    <br><br>
-    <div class="coluna01">
-        <label for="nivel">Armadura:</label>
-        <input type="text" name="valor" value="000" placeholder="000"/>
-    
-        <label for="nivel">Acerto:</label>
-        <input type="text" name="valor" value="000" placeholder="000"/>
-    
-        <label for="nivel">Esquiva:</label>
-        <input type="text" name="valor" value="000" placeholder="000"/>
+                    <label for="nivel">Acerto Critico:</label>
+                    <input type="text" placeholder="000" />
+                </div>
+                    <br><br>
 
-        <label for="nivel">Dano Critico:</label>
-        <input type="text" name="valor" value="000" placeholder="000"/>
-    </div>
+                <div class="coluna01">
+                    <label for="nivel">Armadura:</label>
+                    <input type="text" name="valor" placeholder="000" />
+            
+                    <label for="nivel">Acerto:</label>
+                    <input type="text" name="valor" placeholder="000" />
+            
+                    <label for="nivel">Esquiva:</label>
+                    <input type="text" name="valor" placeholder="000" />
 
+                    <label for="nivel">Dano Critico:</label>
+                    <input type="text" name="valor" placeholder="000" />
+                </div>
+            </div>
+        <br><br>
+     <!--
+     ================== Resistencias do personagem
+     -->
+            
+        <h3>Resistencias Marciais</h3>
+            <div class="containerResistencia">
+                <div class="coluna02">
+                    <label for="resisCortante">Resistencia a Cortante:</label>
+                    <input type="number" name="resisCortante" value="000"/>
+                    <br><br>
+                    <albel for="resisCortante">Resistencia a Perfuração:</albel>
+                    <input type="number" name="resisPerfurante" value="000"/>
+                    <br><br>
+                    <label for="resisContundente">Resistencia a Contundente:</label>
+                    <input type="number" name="resisContundente" value="000"/>
+                </div>
+            </div>
+        <br><br>
+     <!--
+     =========== Ultimo Botão ===========
+     -->
+        <button onclick="calcular()">Calcular</button>
+        <br><br>
 
-
-</div>
-    <!--
-        Resistencias do personagem
-    -->
-    <br><br>
-    <h3>Resistencias Marciais</h3>
-<div class="containerResistencia">
-    <div class="coluna02">
-        <label for="resisCortante">Resistencia a Cortante:</label>
-        <input type="number" name="resisCortante" value="000"/>
-    <br><br>
-        <albel for="resisCortante">Resistencia a Perfuração:</albel>
-        <input type="number" name="resisPerfurante" value="000"/>
-    <br><br>
-        <label for="resisContundente">Resistencia a Contundente:</label>
-        <input type="number" name="resisContundente" value="000"/>
-    <br><br>
-    </div>
-</div>
-<!--
-    =========== Ultimo Botão ===========
--->
-<br><br>
-<button onclick="calcular()">Calcular</button>
-<br><br>
-
-</body>
-
-    <script src="scripts/scripts.js"></script>
-</body>
+    </body>
 </html>
