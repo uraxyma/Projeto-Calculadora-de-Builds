@@ -24,13 +24,19 @@
      ================== Inicio Nível do personagem
      -->
         <label for="nivel">Nível:</label>
-        <input type="number" id="nivel" min="0" max="75">
+            <input type="number" id="nivel" min="0" max="75" />
+
+            <button onclick="addValue(1)">+1</button>
+            <button onclick="addValue(5)">+5</button>
+            <button onclick="addValue(10)">+10</button>
+            <button onclick="addValue(75)">+75</button>
+            <button onclick="reset()">RESET</button>
      <!--
      ================== Atributos Restantes
      -->
         <label for="restantes" >Atributos:</label>
-        <span id="atributos"></span>
-            <br><br>
+            <span id="atributos"></span>
+         <br><br>
      <!--
      ================== Botão Calcular
      -->
@@ -38,42 +44,42 @@
             <br><br>
 
      <!--
-     ================== Atributos
+     ================== Atributos do personagem
      -->
         <h2>Atributos</h2>
             <div class="containerAtributos">
                 <div class="coluna01">
                     <label for="forca">Força:</label>
-                    <input type="number" id="forca" min="00" max="100" onchange="atualizarAtributosRestantes()">
+                    <input type="number" id="forca" min="00" max="100" placeholder="001" />
                         <br><br>
                     
                     <label for="inteligencia">Inteligência:</label>
-                    <input type="number" id="inteligencia" min="00" max="100" onchange="atualizarAtributosRestantes()">
+                    <input type="number" id="inteligencia" min="00" max="100" placeholder="001" />
                         <br><br>
                     
                     <label for="destreza">Destreza:</label>
-                    <input type="number" id="destreza" min="00" max="100" onchange="atualizarAtributosRestantes()">
+                    <input type="number" id="destreza" min="00" max="100" placeholder="001" />
                         <br><br>
                     
                     <label for="agilidade">Agilidade:</label>
-                    <input type="number" id="agilidade" min="00" max="100" onchange="atualizarAtributosRestantes()">
+                    <input type="number" id="agilidade" min="00" max="100" placeholder="001" />
                 </div>
 
                 <div class="coluna01">
                     <label for="vigor">Vigor:</label>
-                    <input type="number" id="vigor" min="00" max="100" onchange="atualizarAtributosRestantes()">
+                    <input type="number" id="vigor" min="00" max="100" placeholder="001" />
                         <br><br>
                     
                     <label for="talento">Talento:</label>
-                    <input type="number" id="talento" min="00" max="100" onchange="atualizarAtributosRestantes()">
+                    <input type="number" id="talento" min="00" max="100" placeholder="001" />
                         <br><br>
                     
                     <label for="sorte">Sorte:</label>
-                    <input type="number" id="sorte" min="00" max="100" onchange="atualizarAtributosRestantes()">
+                    <input type="number" id="sorte" min="00" max="100" placeholder="001" />
                         <br><br>
                     
                     <label for="fe">Fé:</label>
-                    <input type="number" id="fe" min="00" max="100" onchange="atualizarAtributosRestantes()">
+                    <input type="number" id="fe" min="00" max="100" placeholder="001" />
                 </div>
             </div>
         <br><br>
