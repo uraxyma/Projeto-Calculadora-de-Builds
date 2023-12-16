@@ -11,6 +11,14 @@ function calcular() {
 }
 
 function addValue(amount) {
+    updateValue(amount);
+}
+
+function lessValue(amount) {
+    updateValue(-amount);
+}
+
+function updateValue(amount) {
     let inputElement = document.querySelector("#nivel");
     let currentValue = parseInt(inputElement.value) || 0;
     let newValue = currentValue + amount;
