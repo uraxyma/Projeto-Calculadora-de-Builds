@@ -1,6 +1,5 @@
 // === === === variaveis constantes === === ===
 
-
 // === === === variaveis globais === === ===
 
 // === === === funcções === === ===
@@ -36,18 +35,3 @@ function updateValue(amount) {
 
     inputElement.value = newValue;
 }
-
-
-
-// function validarForca(input) {
-//     const valor = input.value;
-//     const min = input.min;
-//     const max = input.max;
-
-//     if (valor < min || valor > max) {
-//         input.value = "";
-//         return false;
-//     }
-//     return true;
-// }
-
