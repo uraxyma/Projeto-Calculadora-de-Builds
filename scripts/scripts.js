@@ -10,6 +10,15 @@ function calcular() {
     document.querySelector("#atributos").innerHTML = restantes;
 }
 
+function reset() {
+    let inputElement = document.querySelector("#nivel");
+    inputElement.value = "00";
+    document.querySelector("#atributos").innerHTML = "000";
+
+// replicar reset para campos: atributos / estatus e Resistencias e ademais //
+
+ }
+
 function addValue(amount) {
     updateValue(amount);
 }
@@ -28,10 +37,7 @@ function updateValue(amount) {
     inputElement.value = newValue;
 }
 
-function reset() {
-    let inputElement = document.querySelector("#nivel");
-    inputElement.value = 0;
-}
+
 
 // function validarForca(input) {
 //     const valor = input.value;
