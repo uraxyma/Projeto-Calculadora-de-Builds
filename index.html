@@ -18,7 +18,7 @@
                 <option value="lutador">Lutador</option>
                 <option value="ranger">Ranger</option>
                 <option value="magico">Mágico</option>
-            </sel
+            </sel>
      <!--
      ================== Inicio Nível do personagem
      -->
@@ -39,7 +39,7 @@
      ================== Atributos Restantes
      -->
         <label for="restantes">Atributos:</label>
-            <!-- <input type="number" id="restantes" min="0" max="225" readonly desabled placeholder="000" />  NÃO CONSEGUIR FAZER O MESMO QUE O INPUT NIVEL-->
+            <!-- <input type="number" id="resto" min="0" max="225" readonly desabled placeholder="000" />  NÃO CONSEGUIR FAZER O MESMO QUE O INPUT NIVEL-->
             <span id="atributos"></span>
      <!--      
      ================== Botão Calcular
@@ -53,32 +53,30 @@
             <div class="containerAtributos">
                 <div class="coluna01">
                     <label for="forca">Força:</label>
-                    <input type="number" id="forca" min="00" max="100" placeholder="001" readonly disabled />
+                        <input type="number" id="forca" min="00" max="100" placeholder="001" readonly disabled />
 
-                    
                     <label for="inteligencia">Inteligência:</label>
-                    <input type="number" id="inteligencia" min="00" max="100" placeholder="001" />
+                        <input type="number" id="inteligencia" min="00" max="100" placeholder="001" />
                     
                     <label for="destreza">Destreza:</label>
-                    <input type="number" id="destreza" min="00" max="100" placeholder="001" />
+                        <input type="number" id="destreza" min="00" max="100" placeholder="001" />
                     
                     <label for="agilidade">Agilidade:</label>
-                    <input type="number" id="agilidade" min="00" max="100" placeholder="001" />
+                        <input type="number" id="agilidade" min="00" max="100" placeholder="001" />
 
                     <label for="vigor">Vigor:</label>
-                    <input type="number" id="vigor" min="00" max="100" placeholder="001" />
+                        <input type="number" id="vigor" min="00" max="100" placeholder="001" />
                     
                     <label for="talento">Talento:</label>
-                    <input type="number" id="talento" min="00" max="100" placeholder="001" />
+                        <input type="number" id="talento" min="00" max="100" placeholder="001" />
                     
                     <label for="sorte">Sorte:</label>
                     <input type="number" id="sorte" min="00" max="100" placeholder="001" />
                     
                     <label for="fe">Fé:</label>
-                    <input type="number" id="fe" min="00" max="100" placeholder="001" />
+                        <input type="number" id="fe" min="00" max="100" placeholder="001" />
                 </div>
             </div>
- -->
      <!--
      ================== Estatus do personagem
      -->
@@ -86,28 +84,28 @@
             <div class="containerStatus">
                 <div class="coluna01">
                     <label for="vida">Vida:</label>
-                    <input type="number" id="hp" value=10.000 readonly disabled />
+                        <input type="number" id="hp" value=10.000 readonly disabled />
                 
                     <label for="estamina">Estamina:</label>
-                    <input type="number" id="stm" value=1.000 readonly disabled />
+                        <input type="number" id="stm" value=1.000 readonly disabled />
                 
                     <label for="mana">Mana:</label>
-                    <input type="number" id="mp" value=1.000 readonly disabled />
+                        <input type="number" id="mp" value=1.000 readonly disabled />
 
                     <label for="taxaDeCriticos">Taxa de Critico:</label>
-                    <input type="number" id="tx" readonly disabled />
+                        <input type="number" id="tx" readonly disabled />
 
                     <label for="armor">Armadura:</label>
-                    <input type="number" id="armor" readonly disabled />
+                        <input type="number" id="armor" readonly disabled />
             
                     <label for="acerto">Acerto:</label>
-                    <input type="number" id="acerto" readonly disabled />
+                        <input type="number" id="acerto" readonly disabled />
             
                     <label for="esquiva">Esquiva:</label>
-                    <input type="number" id="esquiva" readonly disabled />
+                        <input type="number" id="esquiva" readonly disabled />
 
                     <label for="dano critico">Dano Critico:</label>
-                    <input type="number" id="dc" readonly disabled />
+                        <input type="number" id="dc" readonly disabled />
                 </div>
             </div>
      <!--
@@ -116,18 +114,22 @@
         <h3>Resistencias Marciais</h3>
             <div class="containerResistencias">
                 <div class="coluna01">
+
                     <label for="resisCortante">Resistencia a Cortante:</label>
-                    <input type="number" name="resisCortante" value="000"/
+                        <input type="number" name="resisCortante" value="000" />
+
                     <albel for="resisCortante">Resistencia a Perfuração:</albel>
-                    <input type="number" name="resisPerfurante" value="000"/
+                        <input type="number" name="resisPerfurante" value="000" />
+
                     <label for="resisContundente">Resistencia a Contundente:</label>
-                    <input type="number" name="resisContundente" value="000"/>
+                        <input type="number" name="resisContundente" value="000" />
+
                 </div>
-            </
+            </div>
      <!--
      =========== Ultimo Botão ===========
      -->
-        <button onclick="calcular()">Calcular</but
+        <button onclick="calcular()">Calcular</but>
 
     </body>
 </html>
