@@ -10,11 +10,11 @@ function calcular() {
 }
 
 function reset() {
+    // ========= reset Nivel
     let inputElement = document.querySelector("#nivel");
     inputElement.value = "00";
     document.querySelector("#atributos").innerHTML = "000";
-
-// replicar reset para campos: atributos / estatus e Resistencias e ademais //
+    // ========== Reset Atributos
 
  }
 
@@ -27,11 +27,24 @@ function lessValue(amount) {
 }
 
 function updateValue(amount) {
-    let inputElement = document.querySelector("#nivel");
-    let currentValue = parseInt(inputElement.value) || 0;
-    let newValue = currentValue + amount;
+    // ========== função Nível
+    let inputNivel = document.querySelector("#nivel");
+    let currentNivel = parseInt(inputNivel.value) || 0;
+    let newNivel = currentNivel + amount;
 
-    newValue = Math.min(75, Math.max(0, newValue));
+    newNivel = Math.min(75, Math.max(0, newNivel));
 
-    inputElement.value = newValue;
+    inputNivel.value = newNivel;
+}
+
+function updateValue(amount) {
+    // ========== função Atributos
+    let inputAtributo = document.querySelector("#forca");
+    let currentAtributo = parseInt(inputAtributo.value) || 1;
+    let newAtributo = currentAtributo + amount;
+
+    newAtributo = Math.min(100, Math.max(1, newAtributo));
+
+    inputAtributo.value = newAtributo;
+    
 }
