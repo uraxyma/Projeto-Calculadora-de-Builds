@@ -56,91 +56,108 @@
         <div class="coluna01">
             <label for="for">Força:</label>
             <input type="number" id="forca" min="001" max="100" readonly disabled placeholder=001 />
-            <button class="destribuir" onclick="addForca(1)">+1</button>
-            <button class="destribuir" onclick="lessForca(1)">-1</button>
-            <button class="destribuir" onclick="addForca(5)">+5</button>
-            <button class="destribuir" onclick="lessForca(5)">-5</button>
-            <button class="destribuir" onclick="addForca(10)">+10</button>
-            <button class="destribuir" onclick="lessForca(10)">-10</button>
-            <button class="destribuir" onclick="addForca(99)">+99</button>
-            <button class="destribuir" onclick="resetForca()">Resetar</button>
+            <div class="botaoForca">
+                <button class="destribuir" onclick="lessForca(1)">-1</button>
+                <button class="destribuir" onclick="addForca(5)">+5</button>
+                <button class="destribuir" onclick="lessForca(5)">-5</button>
+                <button class="destribuir" onclick="addForca(10)">+10</button>
+                <button class="destribuir" onclick="lessForca(10)">-10</button>
+                <button class="destribuir" onclick="addForca(99)">+99</button>
+                <button class="destribuir" onclick="resetForca()">Resetar</button>
+            </div>
 
             <label for="inteligencia">Inteligência:</label>
             <input type="number" id="int" min="00" max="100" placeholder="001" />
-            <button class="destribuir" onclick="addInt(1)">+1</button>
-            <button class="destribuir" onclick="lessInt(1)">-1</button>
-            <button class="destribuir" onclick="addInt(5)">+5</button>
-            <button class="destribuir" onclick="lessInt(5)">-5</button>
-            <button class="destribuir" onclick="addInt(10)">+10</button>
-            <button class="destribuir" onclick="lessInt(10)">-10</button>
-            <button class="destribuir" onclick="addInt(99)">+99</button>
-            <button class="destribuir" onclick="resetInt()">Resetar</button>
+            <div class="botaoInt">
+                <button class="destribuir" onclick="addInt(1)">+1</button>
+                <button class="destribuir" onclick="lessInt(1)">-1</button>
+                <button class="destribuir" onclick="addInt(5)">+5</button>
+                <button class="destribuir" onclick="lessInt(5)">-5</button>
+                <button class="destribuir" onclick="addInt(10)">+10</button>
+                <button class="destribuir" onclick="lessInt(10)">-10</button>
+                <button class="destribuir" onclick="addInt(99)">+99</button>
+                <button class="destribuir" onclick="resetInt()">Resetar</button>
+            </div>
 
             <label for="destreza">Destreza:</label>
             <input type="number" id="des" min="00" max="100" placeholder="001" />
-            <button class="destribuir" onclick="addValue(1)">+1</button>
-            <button class="destribuir" onclick="lessValue(1)">-1</button>
-            <button class="destribuir" onclick="addValue(5)">+5</button>
-            <button class="destribuir" onclick="lessValue(5)">-5</button>
-            <button class="destribuir" onclick="addValue(10)">+10</button>
-            <button class="destribuir" onclick="lessValue(10)">-10</button>
-            <button class="destribuir" onclick="addValue(99)">+99</button>
-            <button class="destribuir" onclick="reset()">Resetar</button>
+            <div class="botaoDes">
+                <button class="destribuir" onclick="addValue(1)">+1</button>
+                <button class="destribuir" onclick="lessValue(1)">-1</button>
+                <button class="destribuir" onclick="addValue(5)">+5</button>
+                <button class="destribuir" onclick="lessValue(5)">-5</button>
+                <button class="destribuir" onclick="addValue(10)">+10</button>
+                <button class="destribuir" onclick="lessValue(10)">-10</button>
+                <button class="destribuir" onclick="addValue(99)">+99</button>
+                <button class="destribuir" onclick="reset()">Resetar</button>
+            </div>
 
             <label for="agilidade">Agilidade:</label>
             <input type="number" id="agilidade" min="00" max="100" placeholder="001" />
-            <button class="destribuir" onclick="addValue(1)">+1</button>
-            <button class="destribuir" onclick="lessValue(1)">-1</button>
-            <button class="destribuir" onclick="addValue(5)">+5</button>
-            <button class="destribuir" onclick="lessValue(5)">-5</button>
-            <button class="destribuir" onclick="addValue(10)">+10</button>
-            <button class="destribuir" onclick="lessValue(10)">-10</button>
-            <button class="destribuir" onclick="addValue(99)">+99</button>
-            <button class="destribuir" onclick="reset()">Resetar</button>
+            <div class="botaoAgi">
+                <button class="destribuir" onclick="addValue(1)">+1</button>
+                <button class="destribuir" onclick="lessValue(1)">-1</button>
+                <button class="destribuir" onclick="addValue(5)">+5</button>
+                <button class="destribuir" onclick="lessValue(5)">-5</button>
+                <button class="destribuir" onclick="addValue(10)">+10</button>
+                <button class="destribuir" onclick="lessValue(10)">-10</button>
+                <button class="destribuir" onclick="addValue(99)">+99</button>
+                <button class="destribuir" onclick="reset()">Resetar</button>
+            </div>
 
             <label for="vigor">Vigor:</label>
             <input type="number" id="vigor" min="00" max="100" placeholder="001" />
-            <button class="destribuir" onclick="addValue(1)">+1</button>
-            <button class="destribuir" onclick="lessValue(1)">-1</button>
-            <button class="destribuir" onclick="addValue(5)">+5</button>
-            <button class="destribuir" onclick="lessValue(5)">-5</button>
-            <button class="destribuir" onclick="addValue(10)">+10</button>
-            <button class="destribuir" onclick="lessValue(10)">-10</button>
-            <button class="destribuir" onclick="addValue(99)">+99</button>
-            <button class="destribuir" onclick="reset()">Resetar</button>
+            <div class="botaoVig">
+                <button class="destribuir" onclick="addValue(1)">+1</button>
+                <button class="destribuir" onclick="lessValue(1)">-1</button>
+                <button class="destribuir" onclick="addValue(5)">+5</button>
+                <button class="destribuir" onclick="lessValue(5)">-5</button>
+                <button class="destribuir" onclick="addValue(10)">+10</button>
+                <button class="destribuir" onclick="lessValue(10)">-10</button>
+                <button class="destribuir" onclick="addValue(99)">+99</button>
+                <button class="destribuir" onclick="reset()">Resetar</button>
+            </div>
+
 
             <label for="talento">Talento:</label>
             <input type="number" id="talento" min="00" max="100" placeholder="001" />
-            <button class="destribuir" onclick="addValue(1)">+1</button>
-            <button class="destribuir" onclick="lessValue(1)">-1</button>
-            <button class="destribuir" onclick="addValue(5)">+5</button>
-            <button class="destribuir" onclick="lessValue(5)">-5</button>
-            <button class="destribuir" onclick="addValue(10)">+10</button>
-            <button class="destribuir" onclick="lessValue(10)">-10</button>
-            <button class="destribuir" onclick="addValue(99)">+99</button>
-            <button class="destribuir" onclick="reset()">Resetar</button>
+            <div class="botãoTal">
+                <button class="destribuir" onclick="addValue(1)">+1</button>
+                <button class="destribuir" onclick="lessValue(1)">-1</button>
+                <button class="destribuir" onclick="addValue(5)">+5</button>
+                <button class="destribuir" onclick="lessValue(5)">-5</button>
+                <button class="destribuir" onclick="addValue(10)">+10</button>
+                <button class="destribuir" onclick="lessValue(10)">-10</button>
+                <button class="destribuir" onclick="addValue(99)">+99</button>
+                <button class="destribuir" onclick="reset()">Resetar</button>
+            </div>
+
 
             <label for="sorte">Sorte:</label>
             <input type="number" id="sorte" min="00" max="100" placeholder="001" />
-            <button class="destribuir" onclick="addValue(1)">+1</button>
-            <button class="destribuir" onclick="lessValue(1)">-1</button>
-            <button class="destribuir" onclick="addValue(5)">+5</button>
-            <button class="destribuir" onclick="lessValue(5)">-5</button>
-            <button class="destribuir" onclick="addValue(10)">+10</button>
-            <button class="destribuir" onclick="lessValue(10)">-10</button>
-            <button class="destribuir" onclick="addValue(99)">+99</button>
-            <button class="destribuir" onclick="reset()">Resetar</button>
+            <div class="botaoSor">
+                <button class="destribuir" onclick="addValue(1)">+1</button>
+                <button class="destribuir" onclick="lessValue(1)">-1</button>
+                <button class="destribuir" onclick="addValue(5)">+5</button>
+                <button class="destribuir" onclick="lessValue(5)">-5</button>
+                <button class="destribuir" onclick="addValue(10)">+10</button>
+                <button class="destribuir" onclick="lessValue(10)">-10</button>
+                <button class="destribuir" onclick="addValue(99)">+99</button>
+                <button class="destribuir" onclick="reset()">Resetar</button>
+            </div>
 
             <label for="fe">Fé:</label>
             <input type="number" id="fe" min="00" max="100" placeholder="001" />
-            <button class="destribuir" onclick="addValue(1)">+1</button>
-            <button class="destribuir" onclick="lessValue(1)">-1</button>
-            <button class="destribuir" onclick="addValue(5)">+5</button>
-            <button class="destribuir" onclick="lessValue(5)">-5</button>
-            <button class="destribuir" onclick="addValue(10)">+10</button>
-            <button class="destribuir" onclick="lessValue(10)">-10</button>
-            <button class="destribuir" onclick="addValue(99)">+99</button>
-            <button class="destribuir" onclick="reset()">Resetar</button>
+            <div class="botaoFe">
+                <button class="destribuir" onclick="addValue(1)">+1</button>
+                <button class="destribuir" onclick="lessValue(1)">-1</button>
+                <button class="destribuir" onclick="addValue(5)">+5</button>
+                <button class="destribuir" onclick="lessValue(5)">-5</button>
+                <button class="destribuir" onclick="addValue(10)">+10</button>
+                <button class="destribuir" onclick="lessValue(10)">-10</button>
+                <button class="destribuir" onclick="addValue(99)">+99</button>
+                <button class="destribuir" onclick="reset()">Resetar</button>
+            </div>
         </div>
     </div>
     <!--
@@ -183,8 +200,9 @@
 
             <label for="resisCortante">Resistencia a Cortante:</label>
             <input type="number" name="resisCortante" value="000" />
-
+            <br>
             <albel for="resisCortante">Resistencia a Perfuração:</albel>
+            <br>
             <input type="number" name="resisPerfurante" value="000" />
 
             <label for="resisContundente">Resistencia a Contundente:</label>
