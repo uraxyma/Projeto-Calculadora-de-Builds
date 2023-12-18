@@ -43,7 +43,7 @@ function addForca(amount) {
 }
 
 function lessForca(amount) {
-    updateForca(amount);
+    updateForca(-amount);
 }
 
 function updateForca(amount) {
@@ -70,7 +70,7 @@ function addInt(amount) {
 }
 
 function lessInt(amount) {
-    updateInt(amount);
+    updateInt(-amount);
 }
 
 function updateInt(amount) {
