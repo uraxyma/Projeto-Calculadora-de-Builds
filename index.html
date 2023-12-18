@@ -34,7 +34,7 @@
     <button class="destribuir" onclick="lessValue(10)">-10</button>
 
     <button class="destribuir" onclick="addValue(75)">+75</button>
-    <button class="destribuir" onclick="reset()">RESET</button>
+    <button class="destribuir" onclick="resetNivel()">RESET</button>
 
     <label for="nivel">Nível:</label>
     <input type="number" id="nivel" min="0" max="75" randonly disabled placeholder="00" />
@@ -42,7 +42,6 @@
      ================== Atributos Restantes
      -->
     <label for="restantes">Atributos:</label>
-    <!-- <input type="number" id="resto" min="0" max="225" readonly desabled placeholder="000" />  NÃO CONSEGUIR FAZER O MESMO QUE O INPUT NIVEL-->
     <span id="atributos"></span>
     <!--      
      ================== Botão Calcular
@@ -55,27 +54,27 @@
     <h2>Atributos</h2>
     <div class="containerAtributos">
         <div class="coluna01">
-            <label for="forca">Força:</label>
-            <input type="number" id="forca" min="00" max="100" readonly disabled />
-            <button class="destribuir" onclick="addValue(1)">+1</button>
-            <button class="destribuir" onclick="lessValue(1)">-1</button>
-            <button class="destribuir" onclick="addValue(5)">+5</button>
-            <button class="destribuir" onclick="lessValue(5)">-5</button>
-            <button class="destribuir" onclick="addValue(10)">+10</button>
-            <button class="destribuir" onclick="lessValue(10)">-10</button>
-            <button class="destribuir" onclick="addValue(99)">+99</button>
-            <button class="destribuir" onclick="reset()">Resetar</button>
+            <label for="for">Força:</label>
+            <input type="number" id="forca" min="001" max="100" readonly disabled placeholder=001 />
+            <button class="destribuir" onclick="addForca(1)">+1</button>
+            <button class="destribuir" onclick="lessForca(-1)">-1</button>
+            <button class="destribuir" onclick="addForca(5)">+5</button>
+            <button class="destribuir" onclick="lessForca(-5)">-5</button>
+            <button class="destribuir" onclick="addForca(10)">+10</button>
+            <button class="destribuir" onclick="lessForca(-10)">-10</button>
+            <button class="destribuir" onclick="addForca(99)">+99</button>
+            <button class="destribuir" onclick="resetForca()">Resetar</button>
 
             <label for="inteligencia">Inteligência:</label>
             <input type="number" id="int" min="00" max="100" placeholder="001" />
-            <button class="destribuir" onclick="addValue(1)">+1</button>
-            <button class="destribuir" onclick="lessValue(1)">-1</button>
-            <button class="destribuir" onclick="addValue(5)">+5</button>
-            <button class="destribuir" onclick="lessValue(5)">-5</button>
-            <button class="destribuir" onclick="addValue(10)">+10</button>
-            <button class="destribuir" onclick="lessValue(10)">-10</button>
-            <button class="destribuir" onclick="addValue(99)">+99</button>
-            <button class="destribuir" onclick="reset()">Resetar</button>
+            <button class="destribuir" onclick="addInt(1)">+1</button>
+            <button class="destribuir" onclick="lessInt(-1)">-1</button>
+            <button class="destribuir" onclick="addInt(5)">+5</button>
+            <button class="destribuir" onclick="lessInt(-5)">-5</button>
+            <button class="destribuir" onclick="addInt(10)">+10</button>
+            <button class="destribuir" onclick="lessInt(-10)">-10</button>
+            <button class="destribuir" onclick="addInt(99)">+99</button>
+            <button class="destribuir" onclick="resetInt()">Resetar</button>
 
             <label for="destreza">Destreza:</label>
             <input type="number" id="des" min="00" max="100" placeholder="001" />
