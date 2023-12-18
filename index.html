@@ -27,17 +27,13 @@
     <div class="botaoNivel">
         <button onclick="addValue(1)">+1</button>
         <button onclick="lessValue(1)">-1</button>
-    
         <button onclick="addValue(5)">+5</button>
         <button onclick="lessValue(5)">-5</button>
-    
         <button onclick="addValue(10)">+10</button>
         <button onclick="lessValue(10)">-10</button>
-    
         <button onclick="addValue(75)">+75</button>
         <button onclick="resetNivel()">RESET</button>
     </div>
-    
 
     <label for="nivel">Nível:</label>
     <input type="number" id="nivel" min="0" max="75" randonly disabled placeholder="00" />
@@ -57,9 +53,8 @@
     <h2>Atributos</h2>
     <div class="containerAtributos">
         <div class="coluna01">
-            <label for="for">Força:</label>
-            <input type="number" id="forca" min="001" max="100" readonly disabled placeholder=001 />
             <div class="botaoForca">
+                <button onclick="addForca(1)">+1</button>
                 <button onclick="lessForca(1)">-1</button>
                 <button onclick="addForca(5)">+5</button>
                 <button onclick="lessForca(5)">-5</button>
@@ -68,9 +63,9 @@
                 <button onclick="addForca(99)">+99</button>
                 <button onclick="resetForca()">Resetar</button>
             </div>
+            <label for="for">Força:</label>
+            <input type="number" id="forca" min="001" max="100" readonly disabled placeholder=001 />
 
-            <label for="inteligencia">Inteligência:</label>
-            <input type="number" id="int" min="00" max="100" placeholder="001" />
             <div class="botaoInt">
                 <button onclick="addInt(1)">+1</button>
                 <button onclick="lessInt(1)">-1</button>
@@ -81,9 +76,9 @@
                 <button onclick="addInt(99)">+99</button>
                 <button onclick="resetInt()">Resetar</button>
             </div>
+            <label for="inteligencia">Inteligência:</label>
+            <input type="number" id="int" min="00" max="100" placeholder="001" />
 
-            <label for="destreza">Destreza:</label>
-            <input type="number" id="des" min="00" max="100" placeholder="001" />
             <div class="botaoDes">
                 <button onclick="addValue(1)">+1</button>
                 <button onclick="lessValue(1)">-1</button>
@@ -94,9 +89,10 @@
                 <button onclick="addValue(99)">+99</button>
                 <button onclick="reset()">Resetar</button>
             </div>
+            <label for="destreza">Destreza:</label>
+            <input type="number" id="des" min="00" max="100" placeholder="001" />
 
-            <label for="agilidade">Agilidade:</label>
-            <input type="number" id="agilidade" min="00" max="100" placeholder="001" />
+
             <div class="botaoAgi">
                 <button onclick="addValue(1)">+1</button>
                 <button onclick="lessValue(1)">-1</button>
@@ -107,9 +103,10 @@
                 <button onclick="addValue(99)">+99</button>
                 <button onclick="reset()">Resetar</button>
             </div>
+            <label for="agilidade">Agilidade:</label>
+            <input type="number" id="agilidade" min="00" max="100" placeholder="001" />
 
-            <label for="vigor">Vigor:</label>
-            <input type="number" id="vigor" min="00" max="100" placeholder="001" />
+
             <div class="botaoVig">
                 <button onclick="addValue(1)">+1</button>
                 <button onclick="lessValue(1)">-1</button>
@@ -120,10 +117,11 @@
                 <button onclick="addValue(99)">+99</button>
                 <button onclick="reset()">Resetar</button>
             </div>
+            <label for="vigor">Vigor:</label>
+            <input type="number" id="vigor" min="00" max="100" placeholder="001" />
 
 
-            <label for="talento">Talento:</label>
-            <input type="number" id="talento" min="00" max="100" placeholder="001" />
+
             <div class="botãoTal">
                 <button onclick="addValue(1)">+1</button>
                 <button onclick="lessValue(1)">-1</button>
@@ -134,9 +132,10 @@
                 <button onclick="addValue(99)">+99</button>
                 <button onclick="reset()">Resetar</button>
             </div>
+            <label for="talento">Talento:</label>
+            <input type="number" id="talento" min="00" max="100" placeholder="001" />
 
-            <label for="sorte">Sorte:</label>
-            <input type="number" id="sorte" min="00" max="100" placeholder="001" />
+
             <div class="botaoSor">
                 <button onclick="addValue(1)">+1</button>
                 <button onclick="lessValue(1)">-1</button>
@@ -147,9 +146,10 @@
                 <button onclick="addValue(99)">+99</button>
                 <button onclick="reset()">Resetar</button>
             </div>
+            <label for="sorte">Sorte:</label>
+            <input type="number" id="sorte" min="00" max="100" placeholder="001" />
 
-            <label for="fe">Fé:</label>
-            <input type="number" id="fe" min="00" max="100" placeholder="001" />
+
             <div class="botaoFe">
                 <button onclick="addValue(1)">+1</button>
                 <button onclick="lessValue(1)">-1</button>
@@ -160,6 +160,8 @@
                 <button onclick="addValue(99)">+99</button>
                 <button onclick="reset()">Resetar</button>
             </div>
+            <label for="fe">Fé:</label>
+            <input type="number" id="fe" min="00" max="100" placeholder="001" />
         </div>
     </div>
     <!--
