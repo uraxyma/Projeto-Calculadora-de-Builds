@@ -2,16 +2,20 @@
 
 // === === === funções globais === === ===
 window.onload = function() {
-    let valorSalvo = localStorage.getItem('forca');
+    carregarForca();
 
-    if (valorSalvo !== null) {
-        document.querySelector("#forca").value = valorSalvo;
+    function carregarForca() {
+        let valorForca = localStorage.getItem('forca');
+
+        if (valorSalvo !== null) {
+            document.querySelector("#forca").value = valorSalvo;
+        }
+    } 
+
+    function salvarForca() {
+        let valorForca = document.querySelector("#forca").value;
+        localStorage.getItem('forca', valorForca);
     }
-}
-
-function salvarForca() {
-    let valorForca = document.querySelector("#forca").value;
-    localStorage.setItem('forca', valorForca);
 }
 // === === === funcções abaixo === === ===
 
