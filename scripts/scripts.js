@@ -14,7 +14,7 @@ window.onload = function() {
 
     function salvarForca() {
         let valorForca = document.querySelector("#forca").value;
-        localStorage.getItem('forca', valorForca);
+        localStorage.setItem('forca', valorForca);
     }
 }
 // === === === funcções abaixo === === ===
