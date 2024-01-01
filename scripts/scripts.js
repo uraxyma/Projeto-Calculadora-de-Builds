@@ -5,7 +5,7 @@ window.onload = function() {
     carregarForca();
 
     function carregarForca() {
-        let valorForca = localStorage.getItem('forca');
+        let valorSalvo = localStorage.getItem('forca');
 
         if (valorSalvo !== null) {
             document.querySelector("#forca").value = valorSalvo;
