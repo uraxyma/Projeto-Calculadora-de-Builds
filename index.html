@@ -63,9 +63,11 @@
                 <button onclick="addForca(99)">+99</button>
                 <button onclick="resetForca()">Resetar</button>
             </div>
-            <label for="for">Força:</label>
-            <input type="number" id="forca" min="001" max="100" readonly disabled placeholder=001 />
-            <button onclick="salvarForca()">Salvar</button>
+            <div class="forcaContainer">
+                <label for="for">Força:</label>
+                <div id="forca" class="valorForca">01</div>
+            </div>
+            <button onclick="salvarForca()" class="salvarBotao">Salvar</button>
 
             <div class="botaoInt">
                 <button onclick="addInt(1)">+1</button>

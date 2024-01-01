@@ -8,12 +8,12 @@ window.onload = function() {
         let valorSalvo = localStorage.getItem('forca');
 
         if (valorSalvo !== null) {
-            document.querySelector("#forca").value = valorSalvo;
+            document.querySelector("#forca").textContent = valorSalvo;
         }
     } 
 
     function salvarForca() {
-        let valorForca = document.querySelector("#forca").value;
+        let valorForca = document.querySelector("#forca").textContent;
         localStorage.setItem('forca', valorForca);
     }
 }
@@ -48,7 +48,7 @@ function updateValue(amount) {
 function resetNivel() {
     let inputNivel = document.querySelector("#nivel");
     inputNivel.value = "00";
-    document.querySelector("#atributos").innerHTML = 0;
+    document.querySelector("#atributos").innerHTML = 1;
 }
 // seção nivel Acima
 //
@@ -62,24 +62,23 @@ function lessForca(amount) {
 }
 
 function updateForca(amount) {
-    let inputForca = document.querySelector("#forca");
-    let currentForca = parseInt(inputForca.value) || 1;
-    let newForca = currentForca + amount;
+    let divForca = document.querySelector("#forca");
+    let currentForca = parseInt(divForca.textContent) || 1;
+    let newForca = Math.min(100, Math.max(1, currentForca + amount));
 
-    newForca = Math.min(100, Math.max(1, newForca));
-
-    inputForca.value = newForca;
+    divForca.textContent = newForca;
 }
 
 function resetForca() {
-    let inputForca = document.querySelector("#forca");
-    inputForca.value = 1;
-    document.querySelector("#forca").innerHTML = 1;
+    localStorage.removeItem('forca');
+
+    let divForca = document.querySelector("#forca");
+    divForca.textContent = "01";
 }
 
 function salvarForca() {
-    let inputForca = document.querySelector("#Forca");
-    let valorForca = parseInt(inputForca.value) || 1;
+    let divForca = document.querySelector("#forca");
+    let valorForca = parseInt(divForca.textContent) || 1;
 
     localStorage.setItem('forca', valorForca);
 }
