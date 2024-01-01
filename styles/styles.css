@@ -48,6 +48,7 @@ body {
 
   .botaoForca {
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 10px;
   }
 
@@ -70,7 +71,27 @@ body {
   }
 
   .salvarBotão {
-    
+
+  }
+
+  .salvarBotão,
+  .resetBotao {
+    padding: 8px 12px;
+    border: 1px solid #0adae1;
+    border-radius: 5px;
+    color: aqua;
+    background-color: #000000;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .salvarBotão:hover,
+  .resetBotao:hover {
+    background-color: #ddd;
+  }
+
+  .resetBotao {
+    margin-left: 8px;
   }
   
   .containerAtributos > input,
