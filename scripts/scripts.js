@@ -1,12 +1,17 @@
 // === === === variaveis constantes === === ===
 
-// === === === variaveis globais === === ===
+// === === === funções globais === === ===
 window.onload = function() {
     let valorSalvo = localStorage.getItem('forca');
 
     if (valorSalvo !== null) {
         document.querySelector("#forca").value = valorSalvo;
     }
+}
+
+function salvarForca() {
+    let valorForca = document.querySelector("#forca").value;
+    localStorage.setItem('forca', valorForca);
 }
 // === === === funcções abaixo === === ===
 
