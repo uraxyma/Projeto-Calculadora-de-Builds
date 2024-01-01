@@ -1,7 +1,13 @@
 // === === === variaveis constantes === === ===
 
 // === === === variaveis globais === === ===
+window.onload = function() {
+    let valorSalvo = localStorage.getItem('forca');
 
+    if (valorSalvo !== null) {
+        document.querySelector("#forca").value = valorSalvo;
+    }
+}
 // === === === funcções abaixo === === ===
 
 // === função calcular ===
@@ -60,6 +66,13 @@ function resetForca() {
     let inputForca = document.querySelector("#forca");
     inputForca.value = 1;
     document.querySelector("#forca").innerHTML = 1;
+}
+
+function salvarForca() {
+    let inputForca = document.querySelector("#Forca");
+    let valorForca = parseInt(inputForca.value) || 1;
+
+    localStorage.setItem('forca', valorForca);
 }
 // seção atributos força acima >
 //
