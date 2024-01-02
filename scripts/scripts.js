@@ -1,4 +1,20 @@
-// === === === variaveis constantes === === ===
+// === === === variaveis Globais === === ===
+
+let divHpTotal = document.querySelector(".hpTotal");
+let minHp = divHpTotal.dataset.min;
+// === === DiV HP MaX definido Acima === ===
+
+let divStmTotal = document.querySelector(".stmTotal");
+let minStm = divStmTotal.dataset.min;
+// === === Div STM MaX definido Acima === ===
+
+let divMpTotal = document.querySelector(".mpTotal");
+let minMp = divMpTotal.dataset.min;
+// ==== === DiV MP Max definido Acima === ===
+
+let divTxCritica = document.querySelector(".txCritica");
+let minTxCritica = divTxCritica.dataset.min;
+// === === DiV Taxa Critico definido Acima === ===
 
 // === === === funções globais === === ===
 window.onload = function() {
@@ -95,19 +111,25 @@ function lessInt(amount) {
 }
 
 function updateInt(amount) {
-    let input = document.querySelector("#int");
-    let current = parseInt(input.value) || 1;
-    let newInt = current + amount;
+    let divInt = document.querySelector("#int");
+    let currentInt = parseInt(divInt.textContent) || 1;
+    let newInt = Math.min(100, Math.max(1, currentInt + amount));
 
-    newInt = Math.min(100, Math.max(1, newInt));
-
-    input.value = newInt;
+    divInt.textContent = newInt;
 }
 
 function resetInt() {
-    let input = document.querySelector("#int");
-    input.value = 1;
-    document.querySelector("#int").innerHTML = 1;
+    localStorage.removeItem('int');
+
+    let divInt = document.querySelector("#int");
+    divInt.textContent = "01";
+}
+
+function salvarInt() {
+    let divInt = document.querySelector("#int");
+    let valorInt = parseInt(divInt.textContent) || 1;
+
+    localStorage.setItem('int', valorInt);
 }
 
 // seção atributos inteligencia acima >
@@ -122,20 +144,27 @@ function lessDes(amount) {
 }
 
 function updateDes(amount) {
-    let input = document.querySelector("#des");
-    let current = parseInt(input.value) || 1;
-    let newDes = current + amount;
+    let divDes = document.querySelector("#des");
+    let currentDes = parseInt(divDes.textContent) || 1;
+    let newDes = Math.min(100, Math.max(1, currentDes + amount));
 
-    newDes = Math.min(100, Math.max(1, newDes));
-
-    input.value = newDes;
+    divDes.textContent = newDes;
 }
 
 function resetDes() {
-    let input = document.querySelector("#des");
-    input.value = 1;
-    document.querySelector("#des").innerHTML = 1;
+    localStorage.removeItem('des');
+
+    let divDes = document.querySelector("#des");
+    divDes.textContent = "01";
 }
+
+function salvarDes() {
+    let divDes = document.querySelector("#des");
+    let valorDes = parseInt(divDes.textContent) || 1;
+
+    localStorage.setItem('des', valorInt);
+}
+
 // seção atributos Destreza acima >
 //
 // seção atributos agilidade abaixo <
@@ -148,19 +177,25 @@ function lessAgi(amount) {
 }
 
 function updateAgi(amount) {
-    let input = document.querySelector("#agi");
-    let current = parseInt(input.value) || 1;
-    let newAgi = current + amount;
+    let divAgi = document.querySelector("#agi");
+    let currentAgi = parseInt(divAgi.textContent) || 1;
+    let newAgi = Math.min(100, Math.max(1, currentAgi + amount));
 
-    newAgi = Math.min(100, Math.max(1, newAgi));
-
-    input.value = newAgi;
+    divAgi.textContent = newAgi;
 }
 
 function resetAgi() {
-    let input = document.querySelector("#agi");
-    input.value = 1;
-    document.querySelector("#agi").innerHTML = 1;
+    localStorage.removeItem('agi');
+
+    let divAgi = document.querySelector("#agi");
+    divAgi.textContent = "01";
+}
+
+function salvarAgi() {
+    let divAgi = document.querySelector("#agi");
+    let valorAgi = parseInt(divAgi.textContent) || 1;
+
+    localStorage.setItem('agi', valorAgi);
 }
 // seção atributos agilidade acima >
 //
@@ -174,19 +209,25 @@ function lessVig(amount) {
 }
 
 function updateVig(amount) {
-    let input = document.querySelector("#vig");
-    let current = parseInt(input.value) || 1;
-    let newVig = current + amount;
+    let divVig = document.querySelector("#vig");
+    let currentVig = parseInt(divVig.textContent) || 1;
+    let newVig = Math.min(100, Math.max(1, currentVig + amount));
 
-    newVig = Math.min(100, Math.max(1, newVig));
-
-    input.value = newVig;
+    divVig.textContent = newVig;
 }
 
 function resetVig() {
-    let input = document.querySelector("#vig");
-    input.value = 1;
-    document.querySelector("#vig").innerHTML = 1;
+    localStorage.removeItem('vig');
+
+    let divVig = document.querySelector("#vig");
+    divVig.textContent = "01";
+}
+
+function salvarVig() {
+    let divVig = document.querySelector("#vig");
+    let valorVig = parseInt(divVig.textContent) || 1;
+
+    localStorage.setItem('vig', valorVig);
 }
 // seção atributos vigor acima >
 //
@@ -200,37 +241,57 @@ function LessTal(amount) {
 }
 
 function updateTal(amount) {
-    let input = document.querySelector("#tal");
-    let current = parseInt(input.value) || 1;
-    let newTal = current + amount;
+    let divTal = document.querySelector("#tal");
+    let currentTal = parseInt(divTal.textContent) || 1;
+    let newTal = Math.min(100, Math.max(1, currentTal + amount));
 
-    newTal = Math.min(100, Math.max(1, newTal));
-
-    input.value = newTal;
+    divTal.textContent = newTal;
 }
 
 function resetTal() {
-    let input = document.querySelector("#tal");
-    input.value = 1;
-    document.querySelector("#tal").innerHTML = 1;
+    localStorage.removeItem('tal');
+
+    let divTal = document.querySelector("#tal");
+    divTal.textContent = "01";
+}
+
+function salvarTal() {
+    let divTal = document.querySelector("#tal");
+    let valorTal = parseInt(divTal.textContent) || 1;
+
+    localStorage.setItem('tal', valorTal);
 }
 // seção atributos sorte acima >
 //
 // seção atributos sorte abaixo <
 function addSor(amount) {
-    let input = document.querySelector("#sor");
-    let current = parseInt(input.value) || 1;
-    let newSor = current + amount;
+    updateSor(amount);
+}
 
-    newSor = Math.min(100, Math.max(1, newSor));
+function lessSor(amount) {
+    updateSor(-amount);
+}
 
-    input.value = newSor;
+function updateSor(amount) {
+    let divSor = document.querySelector("#sor");
+    let currentSor = parseInt(divSor.textContent) || 1;
+    let newSor = Math.min(100, Math.max(1, currentSor + amount));
+
+    divSor.textContent = newSor;
 }
 
 function resetSor() {
-    let input = document.querySelector("#sor");
-    input.value = 1;
-    document.querySelector("#sor").innerHTML = 1;
+    localStorage.removeItem('sor');
+
+    let divSor = document.querySelector("#sor");
+    divSor.textContent = "01";
+}
+
+function salvarSor() {
+    let divSor = document.querySelector("#sor");
+    let valorSor = parseInt(divSor.textContent) || 1;
+
+    localStorage.setItem('Sor', valorSor);
 }
 // seção atributos sorte acima >
 //
@@ -244,19 +305,25 @@ function lessFe(amount) {
 }
 
 function updateFe(amount) {
-    let input = document.querySelector("#fe");
-    let current = parseInt(input.value) || 1;
-    let newFe = current + amount;
+    let divFe = document.querySelector("#fe");
+    let currentFe = parseInt(divFe.textContent) || 1;
+    let newFe = Math.min(100, Math.max(1, currentFe + amount));
 
-    newFe = Math.min(100, Math.max(1, newFe));
-
-    input.value = newFe
+    divFe.textContent = newFe;
 }
 
 function resetFe() {
-    let input = document.querySelector("#fe");
-    input.value = 1;
-    document.querySelector("#fe").innerHTML = 1;
+    localStorage.removeItem('fe');
+
+    let divFe = document.querySelector("#fe");
+    divFe.textContent = "01";
+}
+
+function salvarFe() {
+    let divFe = document.querySelector("#fe");
+    let valorFe = parseInt(divFe.textContent) || 1;
+
+    localStorage.setItem('fe', valorFe);
 }
 // seção atributos Fé acima >
 //

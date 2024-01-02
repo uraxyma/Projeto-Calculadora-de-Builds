@@ -79,8 +79,11 @@
                 <button onclick="addInt(99)">+99</button>
                 <button onclick="resetInt()">Resetar</button>
             </div>
-            <label for="inteligencia">Inteligência:</label>
-            <input type="number" id="int" min="001" max="100" readonly disabled placeholder="001" />
+            <div class="intContainer">
+                <label for="inteligencia">Inteligência:</label>
+                <div id="int" class="valorInt">01</div>
+            </div>
+            <button onclick="salvarInt()" class="salvarBotao">Salvar</button>
 
             <div class="botaoDes">
                 <button onclick="addDes(1)">+1</button>
@@ -92,8 +95,11 @@
                 <button onclick="addDes(99)">+99</button>
                 <button onclick="resetDes()">Resetar</button>
             </div>
-            <label for="destreza">Destreza:</label>
-            <input type="number" id="des" min="001" max="100" readonly disabled placeholder="001" />
+            <div class="desContainer">
+                <label for="destreza">Destreza:</label>
+                <div id="des" class="valorDes">01</div>
+            </div>
+            <button onclick="salvarDes()" class="salvarBotao">Salvar</button>
 
             <div class="botaoAgi">
                 <button onclick="addAgi(1)">+1</button>
@@ -105,8 +111,11 @@
                 <button onclick="addAgi(99)">+99</button>
                 <button onclick="resetAgi()">Resetar</button>
             </div>
-            <label for="agilidade">Agilidade:</label>
-            <input type="number" id="agi" min="001" max="100" readonly disabled placeholder="001" />
+            <div class="agiContainer">
+                <label for="agilidade">Agilidade:</label>
+                <div id="agi" class="valorAgi">01</div>
+            </div>
+            <button onclick="salvarAgi()" class="salvarBotao">Salvar</button>
 
             <div class="botaoVig">
                 <button onclick="addVig(1)">+1</button>
@@ -118,10 +127,13 @@
                 <button onclick="addVig(99)">+99</button>
                 <button onclick="resetVig()">Resetar</button>
             </div>
-            <label for="vigor">Vigor:</label>
-            <input type="number" id="vig" min="1" max="100" readonly disabled placeholder="001" />
+            <div class="vigContainer">
+                <label for="vigor">Vigor:</label>
+                <div id="vig" class="valorVig">01</div>
+            </div>
+            <button onclick="salvarVig()" class="salvarBotao">Salvar</button>
 
-            <div class="botãoTal">
+            <div class="botaoTal">
                 <button onclick="addTal(1)">+1</button>
                 <button onclick="lessTal(1)">-1</button>
                 <button onclick="addTal(5)">+5</button>
@@ -131,8 +143,11 @@
                 <button onclick="addTal(99)">+99</button>
                 <button onclick="resetTal()">Resetar</button>
             </div>
-            <label for="talento">Talento:</label>
-            <input type="number" id="tal" min="1" max="100" readonly disabled placeholder="001" />
+            <div class="talContainer">
+                <label for="talento">Talento:</label>
+                <div id="tal" class="valorTal">01</div>
+            </div>
+            <button onclick="salvarTal()" class="salvarBotao">Salvar</button>
 
             <div class="botaoSor">
                 <button onclick="addSor(1)">+1</button>
@@ -144,8 +159,11 @@
                 <button onclick="addSor(99)">+99</button>
                 <button onclick="resetSor()">Resetar</button>
             </div>
-            <label for="sorte">Sorte:</label>
-            <input type="number" id="sor" min="1" max="100" readonly disabled placeholder="001" />
+            <div class="sorContainer">
+                <label for="sorte">Sorte:</label>
+                <div id="sor" class="valorSor">01</div>
+            </div>
+            <button onclick="salvarSor()" class="valorBotao">Salvar</button>
 
             <div class="botaoFe">
                 <button onclick="addFe(1)">+1</button>
@@ -157,27 +175,34 @@
                 <button onclick="addFe(99)">+99</button>
                 <button onclick="resetFe()">Resetar</button>
             </div>
-            <label for="fe">Fé:</label>
-            <input type="number" id="fe" min="1" max="100" readonly disabled placeholder="001" />
+            <div class="feContainer">
+                <label for="fe">Fé:</label>
+                <div id="fe" class="valorFe">01</div>
+            </div>
+            <button onclick="salvarFe()" class="salvarBotao">Salvar</button>
         </div>
     </div>
     <!--
+        ============ Botão Calcular
+    -->
+    <button onclick="calcular()">Calcular</button>
+    <!--
      ================== Estatus do personagem
      -->
-    <h3>Estatus do Personagem</h3>
+    <h2>Estatus do Personagem</h2>
     <div class="containerStatus">
-        <div class="coluna01">
+        <div class="colunaStatus">
             <label for="vida">Vida:</label>
-            <input type="number" id="hp" value=10.000 readonly disabled />
+            <div class="hpTotal" data-min="10000">10,000</div>
 
             <label for="estamina">Estamina:</label>
-            <input type="number" id="stm" value=1.000 readonly disabled />
+            <div class="stmTotal" datamin="1000">1,000</div>
 
             <label for="mana">Mana:</label>
-            <input type="number" id="mp" value=1.000 readonly disabled />
+            <div class="mpTotal" data-min="1000">1,000</div>
 
             <label for="taxaDeCriticos">Taxa de Critico:</label>
-            <input type="number" id="tx" readonly disabled />
+            <div class="txCritica" data-min="0%">0%</div>
 
             <label for="armor">Armadura:</label>
             <input type="number" id="armor" readonly disabled />
