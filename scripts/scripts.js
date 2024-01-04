@@ -1,8 +1,19 @@
 // === === === variaveis Globais === === ===
+let nivel = document.querySelector("#nivelTotal").textContent;
+let atributos = document.querySelector("#atributos").textContent;
+
+localStorage.setItem("nivel", nivel);
+localStorage.setItem("#atributos", atributos);
+
+window.addEventListener("pageshow", () => {
+    let nivel = localStorage.getItem("nivel");
+    let atributos = localStorage.getItem("atributos");
+
+    document.querySelector("#nivelTotal").textContent = nivel;
+    document.querySelector("#atributos").textContent = atributos;
+})
 
 // === === === funções globais === === ===
-
-// === === === funcções abaixo === === ===
 
 // === função calcular ===
 function calcularNivel() {
@@ -41,6 +52,10 @@ function resetNivel() {
 
     let divAtributos = document.querySelector("#atributos");
     divAtributos.textContent = "000"
+}
+
+function salvarCalculos() {
+    localStorage.setItem("")
 }
 // seção nivel Acima
 //
