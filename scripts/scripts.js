@@ -1,18 +1,16 @@
 // === === === variaveis Globais === === ===
-let nivel = document.querySelector("#nivelTotal").textContent;
-let atributos = document.querySelector("#atributos").textContent;
+function loadDate() {
+    const dadosNivel = localStorage.getItem("nivel");
+    const dadosAtributos = localStorage.getItem("atributos");
 
-localStorage.setItem("nivel", nivel);
-localStorage.setItem("#atributos", atributos);
+    if (dadosNivel !== null) {
+        document.querySelector("#nivelTotal").textContent = dadosNivel;
+    }
 
-window.addEventListener("pageshow", () => {
-    let nivel = localStorage.getItem("nivel");
-    let atributos = localStorage.getItem("atributos");
-
-    document.querySelector("#nivelTotal").textContent = nivel;
-    document.querySelector("#atributos").textContent = atributos;
-})
-
+    if (dadosAtributos !== null) {
+        document.querySelector("#atributos").textContent = dadosAtributos;
+    }
+}
 // === === === funções globais === === ===
 
 // === função calcular ===
@@ -44,8 +42,8 @@ function updateNivel(amount) {
 }
 
 function resetNivel() {
-    localStorage.removeItem('#nivelTotal');
-    localStorage.removeItem('#atributos');
+    localStorage.removeItem('nivel');
+    localStorage.removeItem('atributos');
 
     let divNivelTotal = document.querySelector("#nivelTotal");
     divNivelTotal.textContent = "00";
@@ -55,7 +53,12 @@ function resetNivel() {
 }
 
 function salvarCalculos() {
-    localStorage.setItem("")
+    let nivel = document.querySelector("#nivelTotal").textContent;
+    let atributos = document.querySelector("#atributos").textContent;
+
+    localStorage.setItem("nivel", nivel);
+    localStorage.setItem("atributos", atributos);
+
 }
 // seção nivel Acima
 //

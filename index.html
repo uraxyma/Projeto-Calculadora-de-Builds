@@ -9,42 +9,45 @@
     <script src="scripts/scripts.js"></script>
 </head>
 
-<body>
+<body onload="loadDate()">
     <h1>Calculadora de Builds</h1>
     <!--
      ================== Seleção de classe Primaria!
      -->
-    <label for="personagem">Classe:</label>
-    <select id="personagem">
-        <option value="Nenhum">Escolha</option>
-        <option value="lutador">Lutador</option>
-        <option value="ranger">Ranger</option>
-        <option value="magico">Mágico</option>
-    </select>
+    <div class="charSelect">
+        <label for="personagem">ESCOLHA A CLASSE</label>
+        <select id="personagem">
+            <option value="Nenhum">Escolha</option>
+            <option value="lutador" id="opcaoLutador">Lutador</option>
+            <option value="ranger" id="opcaoRanger">Ranger</option>
+            <option value="magico" id="opcaoMagico">Mágico</option>
+        </select>
+    </div>
     <!--
      ================== Inicio Nível do personagem
      -->
-    <div class="botaoNivel">
-        <button onclick="addNivel(1)">+1</button>
-        <button onclick="lessNivel(1)">-1</button>
-        <button onclick="addNivel(5)">+5</button>
-        <button onclick="lessNivel(5)">-5</button>
-        <button onclick="addNivel(10)">+10</button>
-        <button onclick="lessNivel(10)">-10</button>
-        <button onclick="setNivelMax(75)">Nível Max</button>
-        <button onclick="calcularNivel()">Calcular Nível</button>
+    <div class="boxNivelGeral">
+        <div class="boxNivel">
+            <button onclick="addNivel(1)">+1</button>
+            <button onclick="lessNivel(1)">-1</button>
+            <button onclick="addNivel(5)">+5</button>
+            <button onclick="lessNivel(5)">-5</button>
+            <button onclick="addNivel(10)">+10</button>
+            <button onclick="lessNivel(10)">-10</button>
+            <button onclick="setNivelMax(75)">Nível Max</button>
+            <button onclick="calcularNivel()">Calcular Nível</button>
+        </div>
 
-    </div>
+        <label for="nivel">Nível:</label>
+        <div id="nivelTotal" class="nivelAtual">00</div>
 
-    <label for="nivel">Nível:</label>
-    <div id="nivelTotal" class="nivelAtual">0</div>
+        <label for="restantes">Atributos:</label>
+        <div id="atributos" class="atriRestantes">000</div>
 
-    <label for="restantes">Atributos:</label>
-    <div id="atributos" class="atriRestantes">000</div>
-
-    <div class="botoesCalculos">
-        <button onclick="resetNivel()">RESET Nível</button>
-        <button onclick="salvarCalculos()">Salvar Nível</button>
+        <div class="botoesCalculos">
+            <button onclick="resetNivel()">RESET Nível</button>
+            <button onclick="salvarCalculos()">Salvar Nível</button>
+        </div>
     </div>
     <!--
      ================== Atributos do personagem
