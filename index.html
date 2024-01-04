@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <h1>Calculadora de Builds: Pangeia</h1>
+    <h1>Calculadora de Builds</h1>
     <!--
      ================== Seleção de classe Primaria!
      -->
@@ -25,28 +25,27 @@
      ================== Inicio Nível do personagem
      -->
     <div class="botaoNivel">
-        <button onclick="addValue(1)">+1</button>
-        <button onclick="lessValue(1)">-1</button>
-        <button onclick="addValue(5)">+5</button>
-        <button onclick="lessValue(5)">-5</button>
-        <button onclick="addValue(10)">+10</button>
-        <button onclick="lessValue(10)">-10</button>
-        <button onclick="addValue(75)">+75</button>
-        <button onclick="resetNivel()">RESET</button>
+        <button onclick="addNivel(1)">+1</button>
+        <button onclick="lessNivel(1)">-1</button>
+        <button onclick="addNivel(5)">+5</button>
+        <button onclick="lessNivel(5)">-5</button>
+        <button onclick="addNivel(10)">+10</button>
+        <button onclick="lessNivel(10)">-10</button>
+        <button onclick="setNivelMax(75)">Nível Max</button>
+        <button onclick="calcularNivel()">Calcular Nível</button>
+
     </div>
 
     <label for="nivel">Nível:</label>
-    <input type="number" id="nivel" min="0" max="75" randonly disabled placeholder="00" />
-    <!--
-     ================== Atributos Restantes
-     -->
-    <label for="restantes">Atributos:</label>
-    <span id="atributos"></span>
-    <!--      
-     ================== Botão Calcular
-     -->
-    <button onclick="calcular()">Calcular</button>
+    <div id="nivelTotal" class="nivelAtual">0</div>
 
+    <label for="restantes">Atributos:</label>
+    <div id="atributos" class="atriRestantes">000</div>
+
+    <div class="botoesCalculos">
+        <button onclick="resetNivel()">RESET Nível</button>
+        <button onclick="salvarCalculos()">Salvar Nível</button>
+    </div>
     <!--
      ================== Atributos do personagem
      -->
@@ -191,7 +190,7 @@
      -->
     <h2>Estatus do Personagem</h2>
     <div class="containerStatus">
-        <div class="colunaStatus">
+        <div class="colunaCharStats">
             <label for="vida">Vida:</label>
             <div class="hpTotal" data-min="10000">10,000</div>
 
@@ -202,19 +201,19 @@
             <div class="mpTotal" data-min="1000">1,000</div>
 
             <label for="taxaDeCriticos">Taxa de Critico:</label>
-            <div class="txCritica" data-min="0%">0%</div>
+            <div class="txCritica">0%</div>
 
             <label for="armor">Armadura:</label>
-            <input type="number" id="armor" readonly disabled />
+            <div class="armadura">0000</div>
 
             <label for="acerto">Acerto:</label>
-            <input type="number" id="acerto" readonly disabled />
+            <div class="precisao">0000</div>
 
             <label for="esquiva">Esquiva:</label>
-            <input type="number" id="esquiva" readonly disabled />
+            <dv class="evasao">0000</dv>
 
             <label for="dano critico">Dano Critico:</label>
-            <input type="number" id="dc" readonly disabled />
+            <div class="critico">0%</div>
         </div>
     </div>
     <!--
@@ -224,14 +223,15 @@
     <div class="containerResistencias">
         <div class="coluna01">
             <label for="resisCortante">Resistencia a Cortante:</label>
-            <input type="number" name="resisCortante" value="000" />
+            <div class="rcortante">0%</div>
             <br>
-            <albel for="resisCortante">Resistencia a Perfuração:</albel>
+            <albel for="resisPerfurante">Resistencia a Perfuração:</albel>
             <br>
-            <input type="number" name="resisPerfurante" value="000" />
-
+            <div class="rPerfurante">0%</div>
+            <br>
             <label for="resisContundente">Resistencia a Contundente:</label>
-            <input type="number" name="resisContundente" value="000" />
+            <br>
+            <div class="rContundente">0%</div>
 
         </div>
     </div>

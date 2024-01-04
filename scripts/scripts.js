@@ -1,70 +1,46 @@
 // === === === variaveis Globais === === ===
 
-let divHpTotal = document.querySelector(".hpTotal");
-let minHp = divHpTotal.dataset.min;
-// === === DiV HP MaX definido Acima === ===
-
-let divStmTotal = document.querySelector(".stmTotal");
-let minStm = divStmTotal.dataset.min;
-// === === Div STM MaX definido Acima === ===
-
-let divMpTotal = document.querySelector(".mpTotal");
-let minMp = divMpTotal.dataset.min;
-// ==== === DiV MP Max definido Acima === ===
-
-let divTxCritica = document.querySelector(".txCritica");
-let minTxCritica = divTxCritica.dataset.min;
-// === === DiV Taxa Critico definido Acima === ===
-
 // === === === funções globais === === ===
-window.onload = function() {
-    carregarForca();
 
-    function carregarForca() {
-        let valorSalvo = localStorage.getItem('forca');
-
-        if (valorSalvo !== null) {
-            document.querySelector("#forca").textContent = valorSalvo;
-        }
-    } 
-
-    function salvarForca() {
-        let valorForca = document.querySelector("#forca").textContent;
-        localStorage.setItem('forca', valorForca);
-    }
-}
 // === === === funcções abaixo === === ===
 
 // === função calcular ===
-function calcular() {
-    var nivel = document.querySelector("#nivel").value;
-    var restantes = nivel * 3;
-    document.querySelector("#atributos").innerHTML = restantes;
+function calcularNivel() {
+    let divNivelTotal = parseInt(document.querySelector("#nivelTotal").textContent);
+    let restantes = divNivelTotal * 3;
+
+    document.querySelector("#atributos").textContent = restantes;
 }
 // seção nivel Abaixo
-function addValue(amount) {
-    updateValue(amount);
+function addNivel(amount) {
+    updateNivel(amount);
 }
 
-function lessValue(amount) {
-    updateValue(-amount);
+function lessNivel(amount) {
+    updateNivel(-amount);
 }
 
-function updateValue(amount) {
-    // ========== função Nível
-    let inputNivel = document.querySelector("#nivel");
-    let currentNivel = parseInt(inputNivel.value) || 0;
-    let newNivel = currentNivel + amount;
+function setNivelMax() {
+   updateNivel(75);    
+}
 
-    newNivel = Math.min(75, Math.max(0, newNivel));
+function updateNivel(amount) {
+    let divNivelTotal = document.querySelector("#nivelTotal");
+    let currentNivel = parseInt(divNivelTotal.textContent) || 0;
+    let newNivel = Math.min(75, Math.max(0, currentNivel + amount));
 
-    inputNivel.value = newNivel;
+   divNivelTotal.textContent = newNivel;
 }
 
 function resetNivel() {
-    let inputNivel = document.querySelector("#nivel");
-    inputNivel.value = "00";
-    document.querySelector("#atributos").innerHTML = 1;
+    localStorage.removeItem('#nivelTotal');
+    localStorage.removeItem('#atributos');
+
+    let divNivelTotal = document.querySelector("#nivelTotal");
+    divNivelTotal.textContent = "00";
+
+    let divAtributos = document.querySelector("#atributos");
+    divAtributos.textContent = "000"
 }
 // seção nivel Acima
 //
