@@ -30,7 +30,7 @@ function lessNivel(amount) {
 }
 
 function setNivelMax() {
-   updateNivel(75);    
+    updateNivel(75);
 }
 
 function updateNivel(amount) {
@@ -38,7 +38,7 @@ function updateNivel(amount) {
     let currentNivel = parseInt(divNivelTotal.textContent) || 0;
     let newNivel = Math.min(75, Math.max(0, currentNivel + amount));
 
-   divNivelTotal.textContent = newNivel;
+    divNivelTotal.textContent = newNivel;
 }
 
 function resetNivel() {
