@@ -6,7 +6,7 @@
     <title>Calculadora de Builds</title>
 
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/scripts.js"></script>
+
 </head>
 
 <body onload="loadDate()">
@@ -14,181 +14,66 @@
     <!--
      ================== Seleção de classe Primaria!
      -->
-    <div class="charSelect">
-        <label for="personagem">ESCOLHA A CLASSE</label>
-        <select id="personagem">
-            <option value="Nenhum">Escolha</option>
-            <option value="lutador" id="opcaoLutador">Lutador</option>
-            <option value="ranger" id="opcaoRanger">Ranger</option>
-            <option value="magico" id="opcaoMagico">Mágico</option>
-        </select>
-    </div>
+
+    <H2>Defina os estatus do personagem</H2>
+    <label for="personagem">ESCOLHA A SUA CLASSE:</label>
+     <br>
+    <label for="opcaoLutador">
+        Lutador:
+        <input type="checkbox" id="opcaoLutador" onclick="selectFighter()">
+    </label>
+
+    <label for="opcaoRanger">
+        Ranger:
+        <input type="checkbox" id="opcaoRanger" onclick="selectRanger()">
+    </label>
+
+    <label for="opcaoArcane">
+        Arcano:
+        <input type="checkbox" id="opcaoArcane" onclick="selectArcane()">
+    </label>
+
+    <br><br>
     <!--
      ================== Inicio Nível do personagem
      -->
-    <div class="boxNivelGeral">
-        <div class="boxNivel">
-            <!-- subistituir "add nivel" por select 1 a 75 -->
-            <button onclick="addNivel(1)">+1</button>
-            <button onclick="lessNivel(1)">-1</button>
-            <button onclick="addNivel(5)">+5</button>
-            <button onclick="lessNivel(5)">-5</button>
-            <button onclick="addNivel(10)">+10</button>
-            <button onclick="lessNivel(10)">-10</button>
-            <button onclick="setNivelMax(75)">Nível Max</button>
-            <button onclick="calcularNivel()">Calcular Nível</button>
-        </div>
+    <label for="nivel">NÍVEL DO PERSONAGEM:</label>
+    <select id="level" onchange="atualizarStats()"></select>
+    <br><br>
 
-        <label for="nivel">Nível:</label>
-        <div id="nivelTotal" class="nivelAtual">00</div>
-
-        <label for="restantes">Atributos:</label>
-        <div id="atributos" class="atriRestantes">000</div>
-
-        <div class="botoesCalculos">
-            <button onclick="resetNivel()">RESET Nível</button>
-            <button onclick="salvarCalculos()">Salvar Nível</button>
-        </div>
-    </div>
+    <label for="restantes">ATRIBUTOS RESTANTES (*3):</label>
+    <div id="atributos" class="atriRestantes">000</div>
     <!--
      ================== Atributos do personagem
      -->
     <h2>Atributos</h2>
     <div class="containerAtributos">
         <div class="coluna01">
-            <div class="botaoForca">
-                <button onclick="addForca(1)">+1</button>
-                <button onclick="lessForca(1)">-1</button>
-                <button onclick="addForca(5)">+5</button>
-                <button onclick="lessForca(5)">-5</button>
-                <button onclick="addForca(10)">+10</button>
-                <button onclick="lessForca(10)">-10</button>
-                <button onclick="addForca(99)">+99</button>
-                <button onclick="resetForca()">Resetar</button>
-            </div>
-            <div class="forcaContainer">
-                <label for="for">Força:</label>
-                <div id="forca" class="valorForca">01</div>
-            </div>
-            <button onclick="salvarForca()" class="salvarBotao">Salvar</button>
+            <label for="for">Força:</label>
+            <div id="forca" class="valorForca">01</div>
 
-            <div class="botaoInt">
-                <button onclick="addInt(1)">+1</button>
-                <button onclick="lessInt(1)">-1</button>
-                <button onclick="addInt(5)">+5</button>
-                <button onclick="lessInt(5)">-5</button>
-                <button onclick="addInt(10)">+10</button>
-                <button onclick="lessInt(10)">-10</button>
-                <button onclick="addInt(99)">+99</button>
-                <button onclick="resetInt()">Resetar</button>
-            </div>
-            <div class="intContainer">
-                <label for="inteligencia">Inteligência:</label>
-                <div id="int" class="valorInt">01</div>
-            </div>
-            <button onclick="salvarInt()" class="salvarBotao">Salvar</button>
+            <label for="inteligencia">Inteligência:</label>
+            <div id="int" class="valorInt">01</div>
 
-            <div class="botaoDes">
-                <button onclick="addDes(1)">+1</button>
-                <button onclick="lessDes(1)">-1</button>
-                <button onclick="addDes(5)">+5</button>
-                <button onclick="lessDes(5)">-5</button>
-                <button onclick="addDes(10)">+10</button>
-                <button onclick="lessDes(10)">-10</button>
-                <button onclick="addDes(99)">+99</button>
-                <button onclick="resetDes()">Resetar</button>
-            </div>
-            <div class="desContainer">
-                <label for="destreza">Destreza:</label>
-                <div id="des" class="valorDes">01</div>
-            </div>
-            <button onclick="salvarDes()" class="salvarBotao">Salvar</button>
+            <label for="destreza">Destreza:</label>
+            <div id="des" class="valorDes">01</div>
 
-            <div class="botaoAgi">
-                <button onclick="addAgi(1)">+1</button>
-                <button onclick="lessAgi(1)">-1</button>
-                <button onclick="addAgi(5)">+5</button>
-                <button onclick="lessAgi(5)">-5</button>
-                <button onclick="addAgi(10)">+10</button>
-                <button onclick="lessAgi(10)">-10</button>
-                <button onclick="addAgi(99)">+99</button>
-                <button onclick="resetAgi()">Resetar</button>
-            </div>
-            <div class="agiContainer">
-                <label for="agilidade">Agilidade:</label>
-                <div id="agi" class="valorAgi">01</div>
-            </div>
-            <button onclick="salvarAgi()" class="salvarBotao">Salvar</button>
+            <label for="agilidade">Agilidade:</label>
+            <div id="agi" class="valorAgi">01</div>
 
-            <div class="botaoVig">
-                <button onclick="addVig(1)">+1</button>
-                <button onclick="lessVig(1)">-1</button>
-                <button onclick="addVig(5)">+5</button>
-                <button onclick="lessVig(5)">-5</button>
-                <button onclick="addVig(10)">+10</button>
-                <button onclick="lessVige(10)">-10</button>
-                <button onclick="addVig(99)">+99</button>
-                <button onclick="resetVig()">Resetar</button>
-            </div>
-            <div class="vigContainer">
-                <label for="vigor">Vigor:</label>
-                <div id="vig" class="valorVig">01</div>
-            </div>
-            <button onclick="salvarVig()" class="salvarBotao">Salvar</button>
+            <label for="vigor">Vigor:</label>
+            <div id="vig" class="valorVig">01</div>
 
-            <div class="botaoTal">
-                <button onclick="addTal(1)">+1</button>
-                <button onclick="lessTal(1)">-1</button>
-                <button onclick="addTal(5)">+5</button>
-                <button onclick="lessTal(5)">-5</button>
-                <button onclick="addTal(10)">+10</button>
-                <button onclick="lessTal(10)">-10</button>
-                <button onclick="addTal(99)">+99</button>
-                <button onclick="resetTal()">Resetar</button>
-            </div>
-            <div class="talContainer">
-                <label for="talento">Talento:</label>
-                <div id="tal" class="valorTal">01</div>
-            </div>
-            <button onclick="salvarTal()" class="salvarBotao">Salvar</button>
+            <label for="talento">Talento:</label>
+            <div id="tal" class="valorTal">01</div>
 
-            <div class="botaoSor">
-                <button onclick="addSor(1)">+1</button>
-                <button onclick="lessSor(1)">-1</button>
-                <button onclick="addSor(5)">+5</button>
-                <button onclick="lessSor(5)">-5</button>
-                <button onclick="addSor(10)">+10</button>
-                <button onclick="lessSor(10)">-10</button>
-                <button onclick="addSor(99)">+99</button>
-                <button onclick="resetSor()">Resetar</button>
-            </div>
-            <div class="sorContainer">
-                <label for="sorte">Sorte:</label>
-                <div id="sor" class="valorSor">01</div>
-            </div>
-            <button onclick="salvarSor()" class="valorBotao">Salvar</button>
+            <label for="sorte">Sorte:</label>
+            <div id="sor" class="valorSor">01</div>
 
-            <div class="botaoFe">
-                <button onclick="addFe(1)">+1</button>
-                <button onclick="lessFe(1)">-1</button>
-                <button onclick="addFe(5)">+5</button>
-                <button onclick="lessFe(5)">-5</button>
-                <button onclick="addFe(10)">+10</button>
-                <button onclick="lessFe(10)">-10</button>
-                <button onclick="addFe(99)">+99</button>
-                <button onclick="resetFe()">Resetar</button>
-            </div>
-            <div class="feContainer">
-                <label for="fe">Fé:</label>
-                <div id="fe" class="valorFe">01</div>
-            </div>
-            <button onclick="salvarFe()" class="salvarBotao">Salvar</button>
+            <label for="fe">Fé:</label>
+            <div id="fe" class="valorFe">01</div>
         </div>
     </div>
-    <!--
-        ============ Botão Calcular
-    -->
-    <button onclick="calcular()">Calcular</button>
     <!--
      ================== Estatus do personagem
      -->
@@ -244,6 +129,7 @@
      -->
     <button onclick="calcular()">Calcular</but>
 
+        <script src="scripts/scripts.js"></script>
 </body>
 
 </html>

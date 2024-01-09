@@ -1,3 +1,18 @@
+// Seleção de nivel ===
+const selectNivel = document.getElementById("level");
+
+for (var i = 1; i <= 75; i++) {
+	var optionNivel = document.createElement("option");
+	optionNivel.value = i;
+	optionNivel.text = i;
+	selectNivel.appendChild(optionNivel);
+}
+ // atributos restantes ===
+function atualizarStats() {
+    let niveSelecionado = selectNivel.value;
+    let novoValor = niveSelecionado * 3;
+    document.querySelector("#atributos").textContent = novoValor;
+}
 // === === === variaveis Globais === === ===
 function loadDate() {
     const dadosNivel = localStorage.getItem("nivel");
@@ -11,47 +26,7 @@ function loadDate() {
         document.querySelector("#atributos").textContent = dadosAtributos;
     }
 }
-// === === === funções globais === === ===
-
-// === função calcular ===
-function calcularNivel() {
-    let divNivelTotal = parseInt(document.querySelector("#nivelTotal").textContent);
-    let restantes = divNivelTotal * 3;
-
-    document.querySelector("#atributos").textContent = restantes;
-}
-// seção nivel Abaixo
-function addNivel(amount) {
-    updateNivel(amount);
-}
-
-function lessNivel(amount) {
-    updateNivel(-amount);
-}
-
-function setNivelMax() {
-    updateNivel(75);
-}
-
-function updateNivel(amount) {
-    let divNivelTotal = document.querySelector("#nivelTotal");
-    let currentNivel = parseInt(divNivelTotal.textContent) || 0;
-    let newNivel = Math.min(75, Math.max(0, currentNivel + amount));
-
-    divNivelTotal.textContent = newNivel;
-}
-
-function resetNivel() {
-    localStorage.removeItem('nivel');
-    localStorage.removeItem('atributos');
-
-    let divNivelTotal = document.querySelector("#nivelTotal");
-    divNivelTotal.textContent = "00";
-
-    let divAtributos = document.querySelector("#atributos");
-    divAtributos.textContent = "000"
-}
-
+// === === === funções Atributos === === ===
 function salvarCalculos() {
     let nivel = document.querySelector("#nivelTotal").textContent;
     let atributos = document.querySelector("#atributos").textContent;
